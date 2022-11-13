@@ -297,6 +297,20 @@ footer {
   box-shadow: 1rem 1rem 1rem gold, 1rem 1rem 2rem gold;
 }
 
+#contact a {
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 0.2rem solid blue;
+  border-radius: 0.5rem;
+}
+
+#contact a:hover {
+  background: red;
+  color: white;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
 @media screen and (min-width: 992px) {
   /* on computer, set columns to only be 50% of the width and not grow */
   .work-card:not(:first-child) {
