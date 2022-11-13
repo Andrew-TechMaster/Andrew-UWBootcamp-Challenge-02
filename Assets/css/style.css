@@ -31,18 +31,42 @@ p {
   margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 4rem;
+h1, h2, h3, h4 {
   margin-bottom: 0.625rem;
   font-weight: 700;
   line-height: 1.1;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
 /* Header Styles & Navigation Bar Styles: */
 header {
   position: fixed;
+  top: 0;
   width: 100%;
   background-color: var(--navbar-color);
+  /* overflow: hidden; */
+}
+
+nav {
+  /* display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between; */
+  /* overflow: hidden; */
 }
 
 nav a {
@@ -92,7 +116,7 @@ main {
 }
 
 section {
-  margin: 2rem 0;
+  margin: 2rem 2rem;
   display: flex;
   flex-flow: row wrap;
 }
@@ -114,7 +138,46 @@ article {
 }
 
 /* Class Selectors */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
 
+.work-card {
+  border: 0.5rem dashed blue;
+  background-color: grey;
+  margin: 1rem 1rem;
+  /* using a mobile-first approach */
+  flex: 1 0 100%;
+  /* padding: 1.5rem; */
+  position: relative;
+  /* display: inline-block; */
+  filter: brightness(60%)
+}
+
+.work-card:hover {
+  background-color: red;
+  filter: brightness(100%)
+  /* filter: brightness(100%); */
+  /* transition: filter 0.3s ease; */
+}
+
+.work-card:first-child {
+  height: 40vh;
+}
+
+.work-card:not(:first-child) {
+  height: 30vh;
+}
+
+.card-title {
+  display: inline-block;
+  background-color: lightblue;
+  color: darkblue;
+  position: absolute;
+  left: 1rem;
+  bottom: 5%;
+}
 
 /* ID Selectors */
 #homebutton {
@@ -125,4 +188,16 @@ article {
 
 #homebutton::before {
   content: "🏠";
+}
+
+#surf {
+  background-image: url("../images/bg.jpg");
+}
+
+
+@media screen and (min-width: 992px) {
+  /* on computer, set columns to only be 50% of the width and not grow */
+  .work-card:not(:first-child) {
+    flex: 0 0 47.45%;
+  }
 }
