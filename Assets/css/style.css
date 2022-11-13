@@ -27,6 +27,17 @@ body {
   line-height: 1.5;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 /* Header Styles & Navigation Bar Styles: */
 header {
   position: fixed;
@@ -72,6 +83,34 @@ figcaption {
   position: relative;
   bottom: 6rem;
   left: 120rem;
+}
+
+/* Main Content Styles */
+main {
+  width: 98%;
+  margin: 2rem auto;
+}
+
+section {
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+aside {
+  flex: 1 1 0;
+  border-right: 0.5rem solid var(--primary-color);
+  padding-right: 1rem;
+  text-align: right;
+  color: var(--primary-color);
+  /* vertical-align: top; */
+  /* align-self: start; */
+}
+
+article {
+  flex: 5 5 0;
+  margin-left: 1.5rem;
+  color: var(--primary-color);
 }
 
 /* Class Selectors */
