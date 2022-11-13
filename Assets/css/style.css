@@ -4,6 +4,11 @@
   --secondary-color: lightblue;
 }
 
+/* set content highlight color and background */
+::selection {
+  background-color: green;
+  color: lightcoral;
+}
 
 /* Universal Selector */
 * {
@@ -113,6 +118,11 @@ figcaption {
   position: relative;
   bottom: 6rem;
   left: 120rem;
+  transition: all 0.5s ease-in-out;
+}
+
+figcaption:hover {
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
 }
 
 span[data-descr] {
@@ -255,6 +265,36 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin-top: 5rem;
+}
+
+#skill div {
+  /* outline is like border, but on the outside of the box instead of inside */
+  outline: 2px dashed red;
+  border-radius: 8px;
+  /* outline-offset: -2px; */
+  transition: all 0.5s ease-in-out;
+}
+
+#skill h2 {
+  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+  position: relative;
+  margin: -4rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: yellow;
+  border: 2px solid blue;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+#skill ul {
+  list-style-position: inside;
+}
+
+/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+#skill div:hover, 
+#skill div:hover h2{
+  box-shadow: 1rem 1rem 1rem gold, 1rem 1rem 2rem gold;
 }
 
 @media screen and (min-width: 992px) {
