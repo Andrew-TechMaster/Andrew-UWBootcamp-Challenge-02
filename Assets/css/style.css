@@ -115,6 +115,22 @@ figcaption {
   left: 120rem;
 }
 
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  cursor: grab;
+}
+
+span[data-descr]:hover::before {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  min-width: 18rem;
+  border: 1px red solid;
+  background-color: white;
+}
+
 /* Main Content Styles */
 main {
   width: 98%;
@@ -233,6 +249,12 @@ footer {
 #runbuddy {
   background-image: url("../images/temp.jpg");
   background-position: center center;
+}
+
+#skill {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 992px) {
