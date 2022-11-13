@@ -63,6 +63,8 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--navbar-color);
+  /* z-index to prevent it from going underneath other elements. */
+  z-index: 100; 
   /* overflow: hidden; */
 }
 
@@ -167,7 +169,7 @@ footer {
 
 .work-card {
   border: 0.5rem dashed blue;
-  background-color: grey;
+  /* background-color: grey; */
   margin: 1rem 1rem;
   /* using a mobile-first approach */
   flex: 1 0 100%;
@@ -178,10 +180,9 @@ footer {
 }
 
 .work-card:hover {
-  background-color: red;
-  filter: brightness(100%)
-  /* filter: brightness(100%); */
-  /* transition: filter 0.3s ease; */
+  /* background-color: red; */
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
 }
 
 .work-card:first-child {
@@ -213,9 +214,26 @@ footer {
 }
 
 #surf {
-  background-image: url("../images/bg.jpg");
+  background-image: url("../images/surfreport.png");
 }
 
+#led {
+  background-image: url("../images/led.png");
+}
+
+#calculator {
+  background-image: url("../images/calculator.jpg");
+  background-position: center left;
+}
+
+#puzzle {
+  background-image: url("../images/puzzle.png");
+}
+
+#runbuddy {
+  background-image: url("../images/temp.jpg");
+  background-position: center center;
+}
 
 @media screen and (min-width: 992px) {
   /* on computer, set columns to only be 50% of the width and not grow */
