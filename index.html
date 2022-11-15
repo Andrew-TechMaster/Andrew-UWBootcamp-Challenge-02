@@ -1,137 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Portfolio</title>
-    <link rel="stylesheet" href="./Assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="./Assets/images/BlackWhiteCat.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Portfolio</title>
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="./Assets/images/BlackWhiteCat.ico">
 </head>
+
 <body>
-    <!-- Header & Navbar -->
-    <header>
-        <nav>
-          <a id="homebutton" href="#">Andrew</a>
+  <!-- Header & Navbar -->
+  <header>
+    <nav>
+      <a id="homebutton" href="#">Andrew</a>
+      <div>
+        <a href="#about-me">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.google.com/" target="_blank">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <figure>
+    <img src="./Assets/images/profile-pic.png" alt="Graphic with Coming Soon text">
+    <figcaption class="text-center">A <span data-descr="Front-End & Back-End">Full-Stack</span> Developer</figcaption>
+  </figure>
+
+  <!-- Main Contents -->
+  <main>
+    <!-- About Section -->
+    <section id="about-me">
+      <aside>
+        <h1>About</h1>
+        <h1>Me</h1>
+      </aside>
+      <article>
+        <p>
+          My name is Andrew Chou, and my another legal name is Sheng-Chu, Chou.
+          I have been working as a full-stack .NET developer for the past two years.
+          I have gained plenty of experience in building web applications and web APIs.
+          C# is my primary programming language. While I am also comfortable with R and python.
+        </p>
+        <div id="skill">
           <div>
-            <a href="#about-me">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
-            <a href="https://www.google.com/" target="_blank">Resume</a>
+            <h2>Front-End</h2>
+            <ul>
+              <li>Html</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Angular</li>
+            </ul>
           </div>
-        </nav>
-    </header>
 
-    <figure>
-        <img src="./Assets/images/profile-pic.png" alt="Graphic with Coming Soon text">
-        <figcaption class="text-center">A <span data-descr="Front-End & Back-End">Full-Stack</span> Developer</figcaption>
-    </figure>
+          <div>
+            <h2>Back-End</h2>
+            <ul>
+              <li>.NET</li>
+              <li>SQL Server</li>
+              <li>Entity Framework</li>
+            </ul>
+          </div>
 
-    <!-- Main Contents -->
-    <main>
-        <!-- About Section -->
-        <section id="about-me">
-            <aside>
-                <h1>About</h1>
-                <h1>Me</h1>
-            </aside>
-            <article> 
-                <p>
-                    My name is Andrew Chou, and my another legal name is Sheng-Chu, Chou. 
-                    I have been working as a full-stack .NET developer for the past two years. 
-                    I have gained plenty of experience in building web applications and web APIs. 
-                    C# is my primary programming language. While I am also comfortable with R and python.
-                   
-                </p>
-                <div id="skill">
-                    <div>
-                      <h2>Front-End</h2>
-                      <ul>
-                        <li>Html</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Angular</li>
-                      </ul>
-                    </div>
-              
-                    <div>
-                      <h2>Back-End</h2>
-                      <ul>
-                        <li>.NET</li>
-                        <li>SQL Server</li>
-                        <li>Entity Framework</li>
-                      </ul>
-                    </div>
-              
-                    <div>
-                      <h2>Other</h2>
-                      <ul>
-                        <li>Machine Learning</li>
-                        <li>Postman</li>
-                        <li>Git</li>
-                      </ul>
-                    </div>
-                </div>
-            </article>
-        </section>
+          <div>
+            <h2>Other</h2>
+            <ul>
+              <li>Machine Learning</li>
+              <li>Postman</li>
+              <li>Git</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
 
-        <!-- Work Section-->
-        <section id="work"> 
-            <aside>
-                <h1>Work</h1>
-            </aside>
-            <article class="flex-container"> 
-                <div id="surf" class="work-card" onclick="location.href='http://www.google.com';"> 
-                    <div class="card-title">
-                      <h3>Surf Report</h3>
-                      <h4>MERN Stack</h4>
-                    </div>
-                  </div>
-                  <div id="led", class="work-card" onclick="location.href='http://www.google.com';"> 
-                    <div class="card-title">
-                      <h3>LED Wall</h3>
-                      <h4>Node/IoT</h4>
-                    </div>
-                  </div>
-                  <div id="calculator" class="work-card" onclick="location.href='http://www.google.com';"> 
-                    <div class="card-title">
-                      <h3>Calculator</h3>
-                      <h4>React/Javascript/CSS</h4>
-                    </div>
-                  </div>
-                  <div id="puzzle" class="work-card"> 
-                    <div class="card-title">
-                      <h3>Pastel Puzzles</h3>
-                      <h4>MERN Stack</h4>
-                    </div>
-                  </div>
-                  <div id="runbuddy" class="work-card"> 
-                    <div class="card-title">
-                      <h3>Run Bubby</h3>
-                      <h4>HTML/CSS</h4>
-                    </div>
-                  </div>
-            </article>
-        </section>
+    <!-- Work Section-->
+    <section id="work">
+      <aside>
+        <h1>Work</h1>
+      </aside>
+      <article class="flex-container">
+        <div id="surf" class="work-card" onclick="location.href='http://www.google.com';">
+          <div class="card-title">
+            <h3>Surf Report</h3>
+            <h4>MERN Stack</h4>
+          </div>
+        </div>
+        <div id="led", class="work-card" onclick="location.href='http://www.google.com';">
+          <div class="card-title">
+            <h3>LED Wall</h3>
+            <h4>Node/IoT</h4>
+          </div>
+        </div>
+        <div id="calculator" class="work-card" onclick="location.href='http://www.google.com';">
+          <div class="card-title">
+            <h3>Calculator</h3>
+            <h4>React/Javascript/CSS</h4>
+          </div>
+        </div>
+        <div id="puzzle" class="work-card">
+          <div class="card-title">
+            <h3>Pastel Puzzles</h3>
+            <h4>MERN Stack</h4>
+          </div>
+        </div>
+        <div id="runbuddy" class="work-card">
+          <div class="card-title">
+            <h3>Run Bubby</h3>
+            <h4>HTML/CSS</h4>
+          </div>
+        </div>
+      </article>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <aside>
-                <h1>Contact</h1>
-                <h1>Me</h1>
-            </aside>
-            <article class="flex-container contact-flex-space "> 
-                <a href="tel:123-456-7890"><h4>📱408.xxx.xxx</h4></a>
-                <a href="mailto:email@example.com"><h4>📧sample@gmail.com</h4></a>
-                <a href="https://github.com/Andrew-TechMaster" target="_blank"><h4>Github</h4></a>
-                <a href="https://github.com/Andrew-TechMaster" target="_blank"><h4>Linkedin</h4></a>
-            </article>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer>
-        <h5>HTML<span role="img" aria-label="heart">❤️</span>CSS</h5>
-    </footer>
+    <!-- Contact Section -->
+    <section id="contact">
+      <aside>
+        <h1>Contact</h1>
+        <h1>Me</h1>
+      </aside>
+      <article class="flex-container contact-flex-space ">
+        <a href="tel:123-456-7890">
+          <h4>📱408.xxx.xxx</h4>
+        </a>
+        <a href="mailto:email@example.com">
+          <h4>📧sample@gmail.com</h4>
+        </a>
+        <a href="https://github.com/Andrew-TechMaster" target="_blank">
+          <h4>Github</h4>
+        </a>
+        <a href="https://github.com/Andrew-TechMaster" target="_blank">
+          <h4>Linkedin</h4>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h5>HTML<span role="img" aria-label="heart">❤️</span>CSS</h5>
+  </footer>
 </body>
+
 </html>
