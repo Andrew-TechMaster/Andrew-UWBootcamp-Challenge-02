@@ -2,21 +2,24 @@
   --navbar-color: grey;
   --primary-color: darkblue;
   --secondary-color: lightblue;
+  --hover-bg: red;
+  --hover-color: white;
+  --box-shadow-effect: 5px 5px blue, 10px 10px red, 15px 15px green;
 }
 
 /* set content highlight color and background */
 ::selection {
-  background-color: green;
+  background-color: black;
   color: lightcoral;
 }
 
-/* ---------- Universal Selector ---------- */
+/* {============================= Universal Selectors =============================} */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* ---------- Element Selectors ---------- */
+/* {============================= Element Selectors =============================} */
 html {
   /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
   font-size: 62.5%;
@@ -61,7 +64,7 @@ h5 {
   font-size: 2rem;
 }
 
-/* Header Styles & Navigation Bar Styles: */
+/* <------ Header Styles & Navigation Bar Styles: ------> */
 header {
   position: fixed;
   top: 0;
@@ -69,14 +72,6 @@ header {
   background-color: var(--navbar-color);
   /* z-index to prevent it from going underneath other elements. */
   z-index: 100; 
-  /* overflow: hidden; */
-}
-
-nav {
-  /* display:flex;
-  flex-flow: row wrap;
-  justify-content: space-between; */
-  /* overflow: hidden; */
 }
 
 nav a {
@@ -87,11 +82,12 @@ nav a {
 }
 
 nav a:hover {
-  background-color: white;
-  color: red;
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
 }
 
 nav div {
+  /* for the navigation bar, not using flex-box but just float the element */
   float: right;
 }
 
@@ -121,7 +117,7 @@ figcaption {
 }
 
 figcaption:hover {
-  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+  box-shadow: var(--box-shadow-effect);
 }
 
 span[data-descr] {
@@ -140,14 +136,14 @@ span[data-descr]:hover::before {
   background-color: white;
 }
 
-/* Main Content Styles */
+/* <----- Main Content Styles: -----> */
 main {
   width: 98%;
   margin: 2rem auto;
 }
 
 section {
-  margin: 2rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   display: flex;
   flex-flow: row wrap;
 }
@@ -158,8 +154,6 @@ aside {
   padding-right: 1rem;
   text-align: right;
   color: var(--primary-color);
-  /* vertical-align: top; */
-  /* align-self: start; */
 }
 
 article {
@@ -168,7 +162,7 @@ article {
   color: var(--primary-color);
 }
 
-/* Footer Styles */
+/* <----- Footer Styles -----> */
 footer {
   width: 100%;
   height: 8rem;
@@ -180,7 +174,8 @@ footer {
   align-items: center; /* align vertical */
 }
 
-/* ---------- Class Selectors ---------- */
+/* {============================= Class Selectors =============================} */
+/* <----- Work-Section & Card Sytles -----> */
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -192,7 +187,6 @@ footer {
   align-items: center;
 }
 
-/* work card & card's title */
 .work-card {
   border: 0.5rem dashed blue;
   margin: 1rem 1rem;
@@ -203,7 +197,6 @@ footer {
 }
 
 .work-card:hover {
-  /* background-color: red; */
   filter: brightness(100%);
   transition: filter 0.3s ease;
 }
@@ -225,7 +218,8 @@ footer {
   bottom: 5%;
 }
 
-/* ---------- ID Selectors ---------- */
+/* {============================= ID Selectors =============================} */
+/* <----- Home Button Styles: -----> */
 #homebutton {
   text-decoration: none;
   color: var(--primary-color);
@@ -236,6 +230,7 @@ footer {
   content: "🏠";
 }
 
+/* <----- About-me's Skill div Styles: -----> */
 #skill {
   display: flex;
   flex-flow: row wrap;
@@ -244,34 +239,37 @@ footer {
 }
 
 #skill div {
+  padding: 2rem;
   /* outline is like border, but on the outside of the box instead of inside */
-  outline: 2px dashed red;
+  outline: 0.5rem solid var(--primary-color);
   border-radius: 8px;
-  /* outline-offset: -2px; */
   transition: all 0.5s ease-in-out;
 }
 
 #skill h2 {
   /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
   position: relative;
-  margin: -4rem 0 1.5rem 0;
+  margin: -5.5rem 0 1.5rem 0;
   padding: 0.5rem 1rem;
   background-color: yellow;
-  border: 2px solid blue;
+  border: 0.5rem dashed var(--primary-color);
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
+  text-align: center;
 }
 
 #skill ul {
   list-style-position: inside;
 }
 
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
 #skill div:hover, 
 #skill div:hover h2{
-  box-shadow: 1rem 1rem 1rem gold, 1rem 1rem 2rem gold;
+  box-shadow: var(--box-shadow-effect);
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
 }
 
+/* <----- Specific work-card Section -----> */
 #surf {
   background-image: url("../images/surfreport.png");
 }
@@ -294,6 +292,7 @@ footer {
   background-position: center center;
 }
 
+/* <----- Footer-Contact Styles -----> */
 #contact a {
   text-decoration: none;
   padding: 1rem;
@@ -302,13 +301,14 @@ footer {
 }
 
 #contact a:hover {
-  background: red;
-  color: white;
+  background: var(--hover-bg);
+  color: var(--hover-color);
   border-radius: 10px;
   transition: 0.5s;
 }
 
-@media screen and (min-width: 1000px) {
+/* {============================= @media =============================} */
+@media screen and (min-width: 992px) {
   /* on computer, set columns to only be 50% of the width and not grow */
   .work-card:not(:first-child) {
     flex: 0 0 47.45%;
