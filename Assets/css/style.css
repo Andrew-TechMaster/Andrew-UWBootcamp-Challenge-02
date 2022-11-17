@@ -176,11 +176,10 @@ footer {
 }
 
 /* {============================= Class Selectors =============================} */
-/* <----- Work-Section & Card Sytles -----> */
 .flex-container {
   display: flex;
   flex-flow: row wrap;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .contact-flex-space {
@@ -188,6 +187,7 @@ footer {
   align-items: center;
 }
 
+/* <----- Work-Section & Card Sytles -----> */
 .work-card:not(.card-title) {
   position: relative;
   margin: 1rem 1rem;
@@ -291,8 +291,9 @@ footer {
 #contact a {
   text-decoration: none;
   padding: 1rem;
-  border-bottom: 0.2rem solid blue;
+  border-bottom: 0.2rem solid var(--primary-color);
   border-radius: 0.5rem;
+  color: var(--primary-color);
 }
 
 #contact a:hover {
@@ -300,12 +301,4 @@ footer {
   color: var(--hover-color);
   border-radius: 10px;
   transition: 0.5s;
-}
-
-/* {============================= @media =============================} */
-@media screen and (min-width: 992px) {
-  /* on computer, set columns to only be 50% of the width and not grow */
-  /* .work-card:not(:first-child) {
-    flex: 0 0 47.45%;
-  } */
 }
