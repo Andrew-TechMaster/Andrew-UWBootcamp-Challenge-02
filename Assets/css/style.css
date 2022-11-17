@@ -188,26 +188,15 @@ footer {
   align-items: center;
 }
 
-.work-card {
-  border: 0.5rem dashed blue;
-  margin: 1rem 1rem;
-  /* using a mobile-first approach */
-  flex: 1 0 100%;
+.work-card:not(.card-title) {
   position: relative;
-  filter: brightness(60%)
+  margin: 1rem 1rem;
+  filter: brightness(60%);
 }
 
 .work-card:hover {
   filter: brightness(100%);
   transition: filter 0.3s ease;
-}
-
-.work-card:first-child {
-  height: 40vh;
-}
-
-.work-card:not(:first-child) {
-  height: 30vh;
 }
 
 .card-title {
@@ -272,23 +261,28 @@ footer {
 
 /* <----- Specific work-card Section -----> */
 #surf {
+  height: 40vh;
   background-image: url("../images/surfreport.png");
 }
 
 #led {
+  height: 20vh;
   background-image: url("../images/led.png");
 }
 
 #calculator {
+  height: 20vh;
   background-image: url("../images/calculator.jpg");
   background-position: center left;
 }
 
 #puzzle {
+  height: 20vh;
   background-image: url("../images/puzzle.png");
 }
 
 #runbuddy {
+  height: 20vh;
   background-image: url("../images/temp.jpg");
   background-position: center center;
 }
@@ -311,7 +305,7 @@ footer {
 /* {============================= @media =============================} */
 @media screen and (min-width: 992px) {
   /* on computer, set columns to only be 50% of the width and not grow */
-  .work-card:not(:first-child) {
+  /* .work-card:not(:first-child) {
     flex: 0 0 47.45%;
-  }
+  } */
 }
