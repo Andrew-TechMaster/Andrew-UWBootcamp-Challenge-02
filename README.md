@@ -7,7 +7,7 @@
 >
 > * Contact me
 
-> **Note**: This is the first version of my portfolio website. Plan to add more features in the future.
+> **Note**: This is the first version of my portfolio website. Plan to add more features in the future. Acutal implementation will be added and updated too. 
 >
 
 
@@ -18,7 +18,7 @@ https://andrew-techmaster.github.io/Andrew-UWBootcamp-Challenge-02/
 ```
 
 
-## 🐻 Screenshots Of The Webpage 
+## 🐻 Screenshots Of The Webpage:
 
 ![screentshot01](./Assets/mockup/sc1.png)
 ![screentshot01](./Assets/mockup/sc2.png)
