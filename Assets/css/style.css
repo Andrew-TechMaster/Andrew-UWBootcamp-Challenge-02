@@ -260,9 +260,17 @@ footer {
 }
 
 /* <----- Specific work-card Section -----> */
-#surf {
+/* #surf {
   height: 40vh;
   background-image: url("../images/surfreport.png");
+} */
+
+#project01 {
+  height: 40vh;
+  background-image: url("../images/cocktailBg.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: 80%
 }
 
 #led {
