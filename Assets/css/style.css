@@ -5,7 +5,7 @@
   --hover-bg: red;
   --hover-color: white;
   --box-shadow-effect: 5px 5px blue, 10px 10px red, 15px 15px green;
-  --background-gradient: linear-gradient(to right, red , yellow);
+  --background-gradient: linear-gradient(to right, red, yellow);
 }
 
 /* set content highlight color and background */
@@ -39,7 +39,11 @@ p {
   margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin-bottom: 0.625rem;
   font-weight: 700;
   line-height: 1.1;
@@ -72,7 +76,7 @@ header {
   width: 100%;
   background-color: var(--navbar-color);
   /* z-index to prevent it from going underneath other elements. */
-  z-index: 100; 
+  z-index: 100;
 }
 
 nav a {
@@ -95,7 +99,7 @@ nav div {
 figure {
   margin: 0;
   background-image: url("../images/bg.jpg");
-  padding-top: 7rem; 
+  padding-top: 7rem;
 }
 
 img {
@@ -171,8 +175,10 @@ footer {
   background-color: var(--navbar-color);
   border-bottom: 2rem solid #4F4846;
   display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
 }
 
 /* {============================= Class Selectors =============================} */
@@ -252,8 +258,8 @@ footer {
   list-style-position: inside;
 }
 
-#skill div:hover, 
-#skill div:hover h2{
+#skill div:hover,
+#skill div:hover h2 {
   box-shadow: var(--box-shadow-effect);
   background-color: var(--hover-bg);
   color: var(--hover-color);
@@ -266,11 +272,19 @@ footer {
 } */
 
 #project01 {
-  height: 40vh;
+  height: 30vh;
   background-image: url("../images/cocktailBg.png");
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: 80%
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%
+}
+
+#project02 {
+  height: 40vh;
+  background-image: url("../images/project02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%
 }
 
 #led {
@@ -279,7 +293,7 @@ footer {
 }
 
 #calculator {
-  height: 20vh;
+  height: 30vh;
   background-image: url("../images/calculator.jpg");
   background-position: center left;
 }
